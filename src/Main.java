@@ -5,11 +5,21 @@ public class Main {
             Employee[i] = new Employee(surnameEmployee[i], nameEmployee[i], lastnameEmployee[i], departmentEmployee[i], salaryEmployee[i]);
         }
     }
+    //Вывод списка сотрудников
     public static void displayingListEmployees(Employee[] Employee) {
         for (int i = 0; i < Employee.length; i++) {
             System.out.println(Employee[i].toString());
         }
     }
+    //  Сумму затрат на ЗП в месяц
+    public static float summMonthlyExpenses(Employee[] Employee){
+        float amountCosts = 0;
+        for (int i = 0; i < Employee.length; i++) {
+            amountCosts += Employee[i].getSalaryEmployee();
+        }
+        return amountCosts;
+    }
+
     public static void main(String[] args) {
         String[] nameEmployee = {"Ульяна", "Михаил", "Платон", "Надежда", "Эмилия", "Георгий", "Дмитрий", "Александра", "Валерия", "Максим"};
         String[] surnameEmployee = {"Моисеева", "Белоусов", "Крылов", "Мартынова", "Наумова", "Наумов", "Сидоров", "Золотова", "Макарова", "Фомин"};
@@ -20,5 +30,6 @@ public class Main {
 
         fillingListEmployees(Employee, surnameEmployee, nameEmployee, lastnameEmployee, departmentEmployee, salaryEmployee);
         displayingListEmployees(Employee);
+        System.out.println("Сумма затрат на ЗП за месяц: " + summMonthlyExpenses(Employee));
     }
 }
