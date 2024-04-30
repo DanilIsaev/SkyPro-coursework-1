@@ -69,7 +69,7 @@ public class Employee {
         Employee comparisonEmployee = (Employee) other;
         return idEmployee == comparisonEmployee.idEmployee; // return [свойство с типом строки].equals(comparisonEmployee.[свойство с типом строки или get]);
     }
-
+    @Override
     public int hashCode() {
         return java.util.Objects.hash(idEmployee);
     }
