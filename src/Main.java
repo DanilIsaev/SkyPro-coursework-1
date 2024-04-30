@@ -5,8 +5,11 @@ public class Main {
             Employee[i] = new Employee(surnameEmployee[i], nameEmployee[i], lastnameEmployee[i], departmentEmployee[i], salaryEmployee[i]);
         }
     }
-
-
+    public static void displayingListEmployees(Employee[] Employee) {
+        for (int i = 0; i < Employee.length; i++) {
+            System.out.println(Employee[i].toString());
+        }
+    }
     public static void main(String[] args) {
         String[] nameEmployee = {"Ульяна", "Михаил", "Платон", "Надежда", "Эмилия", "Георгий", "Дмитрий", "Александра", "Валерия", "Максим"};
         String[] surnameEmployee = {"Моисеева", "Белоусов", "Крылов", "Мартынова", "Наумова", "Наумов", "Сидоров", "Золотова", "Макарова", "Фомин"};
@@ -16,7 +19,6 @@ public class Main {
         Employee[] Employee = new Employee[10];
 
         fillingListEmployees(Employee, surnameEmployee, nameEmployee, lastnameEmployee, departmentEmployee, salaryEmployee);
-
-
+        displayingListEmployees(Employee);
     }
 }
