@@ -61,7 +61,7 @@ public class Employee {
         this.departmentEmployee = newDepartmentEmployee;
     }
 
-
+    @Override
     public boolean equals(Object other) {
         if (this.getClass() != other.getClass()) {
             return false;
