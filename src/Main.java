@@ -5,19 +5,45 @@ public class Main {
             Employee[i] = new Employee(surnameEmployee[i], nameEmployee[i], lastnameEmployee[i], departmentEmployee[i], salaryEmployee[i]);
         }
     }
+
     //Вывод списка сотрудников
     public static void displayingListEmployees(Employee[] Employee) {
         for (int i = 0; i < Employee.length; i++) {
             System.out.println(Employee[i].toString());
         }
     }
+
     //  Сумму затрат на ЗП в месяц
-    public static float summMonthlyExpenses(Employee[] Employee){
+    public static float summMonthlyExpenses(Employee[] Employee) {
         float amountCosts = 0;
         for (int i = 0; i < Employee.length; i++) {
             amountCosts += Employee[i].getSalaryEmployee();
         }
         return amountCosts;
+    }
+
+    // Сотрудник с минимальной ЗП
+    public static String minimumWageEmployee(Employee[] Employee) {
+        String minimumWageEmployee_Name = null;
+        float minimumWageEmployee_Salary = 1_000_000f;
+        for (int i = 0; i < Employee.length; i++) {
+            if (minimumWageEmployee_Salary > Employee[i].getSalaryEmployee()) {
+                minimumWageEmployee_Salary = Employee[i].getSalaryEmployee();
+                minimumWageEmployee_Name = Employee[i].toString();
+            }
+        }
+        return minimumWageEmployee_Name;
+    }
+    public static String maximumWageEmployee(Employee[] Employee) {
+        String maximumWageEmployee_Name = null;
+        float maximumWageEmployee_Salary = 0f;
+        for (int i = 0; i < Employee.length; i++) {
+            if (maximumWageEmployee_Salary < Employee[i].getSalaryEmployee()) {
+                maximumWageEmployee_Salary = Employee[i].getSalaryEmployee();
+                maximumWageEmployee_Name = Employee[i].toString();
+            }
+        }
+        return maximumWageEmployee_Name;
     }
 
     public static void main(String[] args) {
@@ -31,5 +57,7 @@ public class Main {
         fillingListEmployees(Employee, surnameEmployee, nameEmployee, lastnameEmployee, departmentEmployee, salaryEmployee);
         displayingListEmployees(Employee);
         System.out.println("Сумма затрат на ЗП за месяц: " + summMonthlyExpenses(Employee));
+        System.out.println("Сотрудник с минимальной ЗП: " + minimumWageEmployee(Employee));
+        System.out.println("Сотрудник с максимальной ЗП: " + maximumWageEmployee(Employee));
     }
 }
