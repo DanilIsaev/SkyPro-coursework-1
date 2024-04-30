@@ -4,7 +4,7 @@ public class Employee {
     private String lastnameEmployee;
     private int departmentEmployee;
     private float salaryEmployee;
-    private int idEmployee;
+    private final int idEmployee;
     private static int idCounter = 0; // Счечик для выдачи id сотруднику
 
     public Employee(String surnameEmployee, String nameEmployee, String lastnameEmployee, int departmentEmployee, float salaryEmployee) {
