@@ -11,7 +11,13 @@ public class Employee {
         this.surnameEmployee = surnameEmployee;
         this.nameEmployee = nameEmployee;
         this.lastnameEmployee = lastnameEmployee;
+        if (departmentEmployee < 0 || departmentEmployee > 6) {
+            throw new IllegalArgumentException("Данного отдела не существует");
+        }
         this.departmentEmployee = departmentEmployee;
+        if (salaryEmployee < 0) {
+            throw new IllegalArgumentException("Зарплата не может быть отрицательной");
+        }
         this.salaryEmployee = salaryEmployee;
         this.idEmployee = idCounter;
         idCounter++;
@@ -42,6 +48,9 @@ public class Employee {
     }
 
     public void setSalaryEmployee(float newSalaryEmployee) {
+        if (newSalaryEmployee < 0) {
+            throw new IllegalArgumentException("Зарплата не может быть отрицательной");
+        }
         this.salaryEmployee = newSalaryEmployee;
     }
 
