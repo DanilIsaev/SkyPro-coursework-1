@@ -55,7 +55,23 @@ public class Employee {
     }
 
     public void setDepartmentEmployee(int newDepartmentEmployee) {
+        if (newDepartmentEmployee < 0 || newDepartmentEmployee > 6) {
+            throw new IllegalArgumentException("Данного отдела не существует");
+        }
         this.departmentEmployee = newDepartmentEmployee;
+    }
+
+
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Employee comparisonEmployee = (Employee) other;
+        return idEmployee == comparisonEmployee.idEmployee; // return [свойство с типом строки].equals(comparisonEmployee.[свойство с типом строки или get]);
+    }
+
+    public int hashCode() {
+        return java.util.Objects.hash(idEmployee);
     }
 
 
