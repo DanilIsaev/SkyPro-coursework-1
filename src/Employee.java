@@ -20,20 +20,33 @@ public class Employee {
     public String getNameEmployee() {
         return this.nameEmployee;
     }
+
     public String getSurnameEmployee() {
         return this.surnameEmployee;
     }
+
     public String getLastnameEmployee() {
         return this.lastnameEmployee;
     }
+
     public int getDepartmentEmployee() {
         return this.departmentEmployee;
     }
+
     public float getSalaryEmployee() {
         return this.salaryEmployee;
     }
+
     public int getIdEmployee() {
         return this.idEmployee;
+    }
+
+    public void setSalaryEmployee(float newSalaryEmployee) {
+        this.salaryEmployee = newSalaryEmployee;
+    }
+
+    public void setDepartmentEmployee(int newDepartmentEmployee) {
+        this.departmentEmployee = newDepartmentEmployee;
     }
 
 
