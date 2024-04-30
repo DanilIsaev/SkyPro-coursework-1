@@ -34,6 +34,7 @@ public class Main {
         }
         return minimumWageEmployee_Name;
     }
+
     // Сотрудник с максимальной ЗП
     public static String maximumWageEmployee(Employee[] Employee) {
         String maximumWageEmployee_Name = null;
@@ -46,9 +47,10 @@ public class Main {
         }
         return maximumWageEmployee_Name;
     }
+
     public static float averageSalaryEmployees(Employee[] Employee) {
         float averageSalaryEmployees;
-        averageSalaryEmployees = summMonthlyExpenses(Employee)/Employee.length;
+        averageSalaryEmployees = summMonthlyExpenses(Employee) / Employee.length;
         return averageSalaryEmployees;
     }
 
