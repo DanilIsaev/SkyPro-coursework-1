@@ -1,22 +1,40 @@
 public class Employee {
     private String nameEmployee;
-    private String surNameEmployee;
-    private String lastNameEmployee;
+    private String surnameEmployee;
+    private String lastnameEmployee;
     private int departmentEmployee;
     private float salaryEmployee;
     private int idEmployee;
     private static int idCounter = 0; // Счечик для выдачи id сотруднику
 
-    public Employee(String surNameEmployee, String nameEmployee, String lastNameEmployee, int departmentEmployee, float salaryEmployee) {
-        this.surNameEmployee = surNameEmployee;
+    public Employee(String surnameEmployee, String nameEmployee, String lastnameEmployee, int departmentEmployee, float salaryEmployee) {
+        this.surnameEmployee = surnameEmployee;
         this.nameEmployee = nameEmployee;
-        this.lastNameEmployee = lastNameEmployee;
+        this.lastnameEmployee = lastnameEmployee;
         this.departmentEmployee = departmentEmployee;
         this.salaryEmployee = salaryEmployee;
         this.idEmployee = idCounter;
         idCounter++;
     }
 
+    public String getNameEmployee() {
+        return this.nameEmployee;
+    }
+    public String getSurnameEmployee() {
+        return this.surnameEmployee;
+    }
+    public String getLastnameEmployee() {
+        return this.lastnameEmployee;
+    }
+    public int getDepartmentEmployee() {
+        return this.departmentEmployee;
+    }
+    public float getSalaryEmployee() {
+        return this.salaryEmployee;
+    }
+    public int getIdEmployee() {
+        return this.idEmployee;
+    }
 
 
 }
