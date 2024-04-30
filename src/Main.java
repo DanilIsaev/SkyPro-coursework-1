@@ -34,6 +34,7 @@ public class Main {
         }
         return minimumWageEmployee_Name;
     }
+    // Сотрудник с максимальной ЗП
     public static String maximumWageEmployee(Employee[] Employee) {
         String maximumWageEmployee_Name = null;
         float maximumWageEmployee_Salary = 0f;
@@ -44,6 +45,11 @@ public class Main {
             }
         }
         return maximumWageEmployee_Name;
+    }
+    public static float averageSalaryEmployees(Employee[] Employee) {
+        float averageSalaryEmployees;
+        averageSalaryEmployees = summMonthlyExpenses(Employee)/Employee.length;
+        return averageSalaryEmployees;
     }
 
     public static void main(String[] args) {
@@ -59,5 +65,7 @@ public class Main {
         System.out.println("Сумма затрат на ЗП за месяц: " + summMonthlyExpenses(Employee));
         System.out.println("Сотрудник с минимальной ЗП: " + minimumWageEmployee(Employee));
         System.out.println("Сотрудник с максимальной ЗП: " + maximumWageEmployee(Employee));
+        System.out.println("Среднее значение ЗП: " + averageSalaryEmployees(Employee));
+
     }
 }
