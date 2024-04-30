@@ -60,17 +60,17 @@ public class Main {
         String[] lastnameEmployee = {"Савельевна", "Максимович", "Григорьевич", "Львовна", "Дмитриевна", "Григорьевич", "Максимович", "Данииловна", "Богдановна", "Евгеньевич"};
         int[] departmentEmployee = {4, 4, 1, 1, 1, 5, 2, 1, 3, 3};
         float[] salaryEmployee = {81829f, 143553f, 81263f, 41372f, 83888f, 37498f, 146755f, 26775f, 115737f, 132367f};
-        Employee[] Employee = new Employee[10];
+        Employee[] employeeList = new Employee[10];
 
-        fillingListEmployees(Employee, surnameEmployee, nameEmployee, lastnameEmployee, departmentEmployee, salaryEmployee);
-        displayingListEmployees(Employee);
-        System.out.println("Сумма затрат на ЗП за месяц: " + summMonthlyExpenses(Employee));
-        System.out.println("Сотрудник с минимальной ЗП: " + minimumWageEmployee(Employee));
-        System.out.println("Сотрудник с максимальной ЗП: " + maximumWageEmployee(Employee));
-        System.out.println("Среднее значение ЗП: " + averageSalaryEmployees(Employee));
+        fillingListEmployees(employeeList, surnameEmployee, nameEmployee, lastnameEmployee, departmentEmployee, salaryEmployee);
+        displayingListEmployees(employeeList);
+        System.out.println("Сумма затрат на ЗП за месяц: " + summMonthlyExpenses(employeeList));
+        System.out.println("Сотрудник с минимальной ЗП: " + minimumWageEmployee(employeeList));
+        System.out.println("Сотрудник с максимальной ЗП: " + maximumWageEmployee(employeeList));
+        System.out.println("Среднее значение ЗП: " + averageSalaryEmployees(employeeList));
 
-        for (int i = 0; i < Employee.length; i++) {
-            System.out.println(Employee[i].getLastnameEmployee() + " " + Employee[i].getNameEmployee() + " " + Employee[i].getLastnameEmployee());
+        for (int i = 0; i < employeeList.length; i++) {
+            System.out.println(employeeList[i].getLastnameEmployee() + " " + employeeList[i].getNameEmployee() + " " + employeeList[i].getLastnameEmployee());
         }
 
     }
