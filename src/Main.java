@@ -67,5 +67,9 @@ public class Main {
         System.out.println("Сотрудник с максимальной ЗП: " + maximumWageEmployee(Employee));
         System.out.println("Среднее значение ЗП: " + averageSalaryEmployees(Employee));
 
+        for (int i = 0; i < Employee.length; i++) {
+            System.out.println(Employee[i].getLastnameEmployee() + " " + Employee[i].getNameEmployee() + " " + Employee[i].getLastnameEmployee());
+        }
+
     }
 }
