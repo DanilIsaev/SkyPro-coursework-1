@@ -74,5 +74,8 @@ public class Employee {
         return java.util.Objects.hash(idEmployee);
     }
 
-
+    @Override
+    public String toString() {
+        return idEmployee + surnameEmployee + nameEmployee + lastnameEmployee + departmentEmployee + salaryEmployee;
+    }
 }
